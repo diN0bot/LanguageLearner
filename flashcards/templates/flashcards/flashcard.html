@@ -31,7 +31,7 @@
 	<script type="text/javascript" src="//www.google.com/jsapi"></script> 
 	<script type="text/javascript">
 		google.load("language", "1");
-		google.load("search", "1",{nocss:1});
+		google.load("search", "1",{nocss:1, "language" : "de"});
 		$(function() {
 			var word = $("#word").text();
 			var second_word = $("#second_word").text();
@@ -60,8 +60,6 @@
 				}
 			});
 			
-			google.load('search', '1');
-			 
 		      // the se class encapsulates a left and right search control
 		      // both controls are driven by a shared search form
 		      function se() {
