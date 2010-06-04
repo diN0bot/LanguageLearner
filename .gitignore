@@ -1,2 +1,4 @@
-env
+env/CURRENT
+env/whynoti
+env/snoopy
 *.sqlite
