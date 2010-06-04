@@ -1,0 +1,11 @@
+{% extends 'flashcards/superbase.html' %}
+
+{% block content %}
+  <form method="POST">
+    <div><label>en: </label></div>
+    <div><input type="text" name="wordA" value="{{ wordA }}"/></div>
+    <div><label>de: </label></div>
+    <div><input type="text" name="wordB" value="{{ wordB }}"/></div>
+    <div><input type="submit" value="save" /></div>
+  </form>
+{% endblock %}

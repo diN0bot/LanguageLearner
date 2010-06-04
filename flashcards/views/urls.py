@@ -9,4 +9,7 @@ urlpatterns = patterns('',
     
     url(r'^right/(?P<id>[\d]+)$', main.right, name="right"),
     url(r'^wrong/(?P<id>[\d]+)$', main.wrong, name="wrong"),
+
+    url(r'^add/$', main.add, name="add"),
+    url(r'^all/$', main.all, name="all"),
 )

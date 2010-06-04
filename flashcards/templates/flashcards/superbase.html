@@ -17,6 +17,11 @@
 		<div id="page">
 			{% block content %}
 			{% endblock %}
+		<div id="navigate">
+		  <span><a href="{% url play %}">play</a></span>
+		  <span><a href="{% url add %}">add</a></span>
+		  <span><a href="{% url all %}">all</a></span>
+		</div>
 		</div>
 	</body>
 

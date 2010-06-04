@@ -53,3 +53,17 @@ def smart_bool(s):
     return s
   s = str(s).strip().lower()
   return not s in ['false','f','n','0','']
+
+def add(request):
+  if request.POST:
+    wordA = request.POST.get("wordA", "")
+    wordB = request.POST.get("wordB", "")
+    wordA = wordA.strip()
+    wordB = wordB.strip()
+    FlashCard.add(wordA, wordB)
+    return HttpResponseRedirect(reverse('add'))
+  return render_response(request, 'flashcards/add.html', locals())
+
+def all(request):
+  flashcards = FlashCard.objects.all()
+  return render_response(request, 'flashcards/all.html', locals())

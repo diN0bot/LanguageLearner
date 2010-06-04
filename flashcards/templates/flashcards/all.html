@@ -1,0 +1,10 @@
+{% extends 'flashcards/superbase.html' %}
+
+{% block content %}
+  "en" -> "de" (right, wrong)
+  {% for flashcard in flashcards %}
+    <div class="flashcard">
+      {{ flashcard }}
+    </div>
+  {% endfor %}
+{% endblock %}
