@@ -1,0 +1,66 @@
+/*
+ colors (solid, dark unless stated otherwise):
+   brighter blue 46C4F2
+   bright blue 00B0F0
+   middle blue 0099D8
+   dark blue 1C5492
+   deep blue (sidebar) 003366
+   soft blue (sidebar and links) 336699
+   grey 89958c
+   dark bluegreen 156451
+   soft green (sidebar) 669933
+   purple 6C0B5D
+   red (menu border) 8A4304
+   bright orange FF9900
+   darker orange 
+   brown header text cd8047 (was cc9966 and b15b1c)
+   dark brown text (was 330000)
+   yellow chart background f7edb4
+   beige highlight for accounting FBFBDE
+   body bg fbfbfa
+
+ #daf4d0;  pale green
+ #d4d0f4;  pale blue (lavender)
+ #f4d0d8;  pale pink
+ #f4f3d0;  pale yellow
+ #e9d0f4;  pale purple
+*/
+
+/******** GENERAL LOOK AND FEEL *******************************************/
+
+body {
+	background: #fbfbfa;			
+	color: #330000;
+	margin: 0em;
+	padding: 0em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12.2px;
+	text-align: center;
+}
+
+#page {
+	width: 60em;
+	margin: auto;
+	padding: 0em 2em;
+}
+
+p { text-align: left; font-size: 1.03em; }
+                     
+ul, ol, ul li, ol li { text-align: left; }
+
+a, .link { color:#336699; text-decoration:underline; cursor: pointer; }
+a:hover, .link:hover { color:#FF9900; text-decoration:underline; cursor: pointer; }
+a img { border: none; }
+
+img { -ms-interpolation-mode:bicubic; }
+.img_link { text-decoration: none; cursor: pointer; }
+
+.hidden { display: none; }
+.new { color: #F37F19; }
+.odd { background: #FAF3F4; }
+.errorlist {  color: red; }
+.error, .errors, #error, #errors { color: red; text-align: center; }
+.errors ul, .errors ol, #errors ul, #errors ol { list-style-type: none; }
+.success, #success { color: green; text-align: center; }
+
+/******** GENERAL LAYOUT *******************************************/

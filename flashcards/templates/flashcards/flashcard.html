@@ -1,0 +1,149 @@
+{% extends 'flashcards/superbase.html' %}
+
+{% block content %}
+	<div id="word">
+		{% if side_B %}
+			{{ flashcard.wordB }}
+		{% else %}
+			{{ flashcard.wordA }}
+		{% endif %}
+	</div>
+	{% if both_sides %}
+		<div id="second_word">
+			{% if side_B %}
+				{{ flashcard.wordA }}
+			{% else %}
+				{{ flashcard.wordB }}
+			{% endif %}
+		</div>
+		<a href="{% url right flashcard.id %}">
+			<input type="button" value="Right" />
+		</a>
+		<a href="{% url wrong flashcard.id %}">
+			<input type="button" value="Wrong" />
+		</a>
+	{% else %}
+		<a href="{% url flashcard_by_id flashcard.id %}?both=True&B={{ side_B }}">
+			<input type="button" value="Answer" />
+		</a>
+	{% endif %}
+	
+	<script type="text/javascript" src="//www.google.com/jsapi"></script> 
+	<script type="text/javascript">
+		google.load("language", "1");
+		google.load("search", "1",{nocss:1});
+		$(function() {
+	    	var word = $("#word").text();
+
+	    	/* 
+	    	 * google language detection
+	    	 *
+			google.language.detect(word, function(result) {
+				if (!result.error) {
+					var language = 'unknown';
+					for (l in google.language.Languages) {
+						if (google.language.Languages[l] == result.language) {
+							language = l;
+							break;
+						}
+					}
+					$("#detection").text(language);
+				}
+			});
+			*/
+			
+			{% if both_sides %}
+			google.language.translate(word, "en", "de", function(result) {
+				if (!result.error) {
+					$("#translation").text("Google translation: "+word+" -> "+result.translation);
+				}
+			});
+			{% endif %}
+	    });
+    </script>
+    <div id="detection"></div> 
+    <div id="translation"></div> 
+    
+    
+    
+    
+    
+    
+	<style type="text/css"> 
+      .gs-watermark { display: none; }
+      .gs-size { display: none; }
+      .gs-visibleUrl { display: none; }
+      .gsc-twiddleRegionCell { display: none; }
+      .gsc-branding { display: none; }
+      #searchForm { display: none; }
+      .gsc-search-box { text-align: center; display: inline; padding-top: 1em; }
+      .gsc-imageResult, .gsc-imageResult { display: inline; }
+     </style> 
+    <script type="text/javascript"> 
+      google.load('search', '1');
+ 
+      // the se class encapsulates a left and right search control
+      // both controls are driven by a shared search form
+      function se() {
+        var sFormDiv = document.getElementById("searchForm");
+        var leftScDiv = document.getElementById("images");
+ 
+        // create a left, right search control
+        // create a custom search form
+        this.leftControl = new google.search.SearchControl();
+        this.searchForm = new google.search.SearchForm(true, sFormDiv);
+ 
+        // bind clear and submit functions
+        this.searchForm.setOnSubmitCallback(this, se.prototype.onSubmit);
+        this.searchForm.setOnClearCallback(this, se.prototype.onClear);
+ 
+        // set up for large result sets
+        this.leftControl.setResultSetSize(google.search.Search.LARGE_RESULTSET);
+        
+        var searcher;
+        var options;
+ 
+        // configure left control
+        // vertical layout, image and blog
+        var options = new google.search.SearcherOptions();
+		options.setExpandMode(google.search.SearchControl.EXPAND_MODE_OPEN);
+        this.leftControl.addSearcher(new google.search.ImageSearch(), options);
+        //this.leftControl.addSearcher(new google.search.VideoSearch());
+ 
+        var drawOptions = new google.search.DrawOptions();
+        drawOptions.setDrawMode(GSearchControl.DRAW_MODE_LINEAR);
+ 
+        this.leftControl.setNoResultsString(GSearchControl.NO_RESULTS_DEFAULT_STRING);
+        this.leftControl.draw(leftScDiv);
+ 
+        // execute a starter search
+        this.searchForm.execute("Ferrari");
+ 
+      }
+ 
+      // when the form fires a submit, grab its
+      // value and call the left and right control
+      se.prototype.onSubmit = function(form) {
+        var q = form.input.value;
+        if (q && q!= "") {
+          this.leftControl.execute(q);
+        }
+        return false;
+      }
+ 
+      // when the form fires a clear, call the left and right control
+      se.prototype.onClear = function(form) {
+        this.leftControl.clearAllResults();
+        form.input.value = "";
+        return false;
+      }
+ 
+      function OnLoad() {
+        new se();
+      }
+      google.setOnLoadCallback(OnLoad, true);
+    </script> 
+
+    <div id="searchForm">Loading...</div> 
+    <div id="images" class="search-control">Loading...</div> 
+{% endblock %}
