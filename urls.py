@@ -11,7 +11,7 @@ urlpatterns += patterns('',
   (r'^admin/doc/', include('django.contrib.admindocs.urls')),
   url(r'^admin/(.*)', admin.site.root, name="admin"),
   
-  (r'^', include('flashcards.views.urls')),
+  (r'^fc/', include('flashcards.views.urls')),
 )
 
 if settings.DJANGO_SERVER:

@@ -11,9 +11,9 @@ def flashcard_by_id(request, id):
   return render_flashcard(request, flashcard)
 
 def flashcard_by_word(request, word):
-  flashcard = FlashCard.get_or_none(languageA=word)
+  flashcard = FlashCard.get_or_404(wordA=word)
   if not flashcard:
-    flashcard = FlashCard.get_or_none(languageB=word)
+    flashcard = FlashCard.get_or_404(wordB=word)
   return render_flashcard(request, flashcard)
   
 def render_flashcard(request, flashcard):

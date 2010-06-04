@@ -34,14 +34,15 @@ body {
 	margin: 0em;
 	padding: 0em;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size:12.2px;
-	text-align: center;
+	font-size:16px;
+	text-align: left;
 }
 
 #page {
-	width: 60em;
-	margin: auto;
-	padding: 0em 2em;
+	width: 10em;
+	margin: 0em;
+	padding: 0em;
+	text-align: center;
 }
 
 p { text-align: left; font-size: 1.03em; }
@@ -64,3 +65,14 @@ img { -ms-interpolation-mode:bicubic; }
 .success, #success { color: green; text-align: center; }
 
 /******** GENERAL LAYOUT *******************************************/
+
+/******** FLASHCARD *******************************************/
+
+.gs-watermark { display: none; }
+.gs-size { display: none; }
+.gs-visibleUrl { display: none; }
+.gsc-twiddleRegionCell { display: none; }
+.gsc-branding { display: none; }
+#searchForm { display: none; }
+.gsc-search-box { text-align: center; display: inline; padding-top: 1em; }
+.gsc-imageResult, .gsc-imageResult { display: inline; }
