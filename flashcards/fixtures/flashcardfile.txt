@@ -1,16 +1,1 @@
-fun:Spass
-slackline:slacklinen
-embarassing:peinlich
-make:mache
-speak:sprechen
-read:lesen
-let's go:gehen wir
-what do you mean?:wieso denn?
-I read it with speed 0.8 pages per minute :ich lese doch mit Gerchwindigkeit 0,8 Seiten pro Minute
-X per Y:X pro Y
-speed:Gerwindigkeit
-a:ein
-thick:dickes
-book:Buch
-you will:du wirst
-forever:ewig, immer, fur immer
+have fun:viel Spaß

@@ -7,18 +7,19 @@ def read_flashcardfile(filename):
   #f = codecs.open(filename, 'r', 'utf-8')
   f = open(filename, 'r')
   for line in f.readlines():
+    line = line.strip()
+    if not line:
+      continue
     words = line.split(':')
-    wordA = words[0]
-    wordB = words[1]
-    print wordA, "      ", wordB, "      ", FlashCard.objects.filter(wordA=wordA), 
+    wordA = words[0].strip()
+    wordB = words[1].strip()
     if FlashCard.objects.filter(wordA=wordA).count():
-      print "already exists A"
       continue
     if FlashCard.objects.filter(wordB=wordB).count():
-      print "already exists B"
       continue
     FlashCard.add(wordA, wordB)
   f.close()
     
 if __name__ == "__main__":
-  read_flashcardfile("flashcards/fixtures/flashcardfile.txt")
+  from settings import FLASHCARD_FILENAME
+  read_flashcardfile(FLASHCARD_FILENAME)

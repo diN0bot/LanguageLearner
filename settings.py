@@ -47,6 +47,8 @@ MANAGERS = ADMINS
 
 APPS = ('flashcards',)
 
+FLASHCARD_FILENAME = 'flashcards/fixtures/flashcardfile.txt'
+
 EMAIL = "service@ProcrasDonate.com"
 
 DOMAIN = 'http://whynoti.com'

@@ -11,8 +11,10 @@ class FlashCard(models.Model):
   
   number_right = models.IntegerField(default=0)
   number_wrong = models.IntegerField(default=0)
+  #answer_ratio = models.FloatField(default=0.0)
+  #trouble_score = models.FloatField(default=0.5)
   answer_ratio = models.IntegerField(default=0)
-  trouble_score = models.IntegerField(default=50)
+  trouble_score = models.IntegerField(default=0)
   last_read = models.DateTimeField(auto_now=True)
     
   @classmethod
