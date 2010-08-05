@@ -26,7 +26,7 @@ def render_flashcard(request, flashcard):
   return render_response(request, 'flashcards/flashcard.html', locals())
 
 def play(request):
-  f = FlashCard.objects.all().order_by('?')
+  f = FlashCard.objects.all().order_by('number_right')
   if f.count() == 0:
     return render_response(request, 'flashcards/error.html', {'error': 'No flashcards'})
   

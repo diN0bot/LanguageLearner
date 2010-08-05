@@ -1,1 +1,97 @@
-have fun:viel Spaß
+fun:Spass
+
+slackline:slacklinen
+
+embarassing:peinlich
+
+make:mache
+
+speak:sprechen
+
+read:lesen
+
+let's go:gehen wir
+
+what do you mean?:wieso denn?
+
+I read it with speed 0.8 pages per minute :ich lese doch mit Gerchwindigkeit 0,8 Seiten pro Minute
+
+X per Y:X pro Y
+
+speed:Gerwindigkeit
+
+a:ein
+
+thick:dickes
+
+book:Buch
+
+you will:du wirst
+
+forever:ewig, immer, fur immer
+
+house:haus
+play:spielen
+game:spiel
+together, do you want to date me?:miteinander
+lake:see
+this:dieser
+Und wie war der erste Arbeitstag?:And how was the first working day?
+Now I'll take a walk.:Ich mach jetzt erstmal einen Spaziergang.
+Unfortunately without you.:Leider ohne dich.
+Working day:Arbeitstag
+first:erste, erstmal
+how:wie
+was:war
+walk:Spaziergang
+now:jetzt
+unfortunately:Leider
+without:ohne
+you:dich
+Monday:Montag (Mo)
+Tuesday:Dienstag (Di)
+Wednesday:Mittwoch (Mi)
+Thursday:Donnerstag (Do)
+Friday:Freitag (Fr)
+Saturday:Samstag (Sa), Sonnabend (Sa)
+Sunday:Sonntag (So)
+January:Januar
+February:Februar
+March:März
+April:April
+May:Mai
+June:Juni
+July:Juli
+August:August
+September:September
+October:Oktober
+November:November
+December:Dezember
+until later:bis spaeter
+until morning:bis morgen
+all is clear:alles klar
+Should it be translated?:Soll sie übersetzt werden?
+This webpage:Diese Seite
+File:Ablage
+Edit:Bearbeiten
+History:Verlauf
+Bookmarks:Lesezeichen
+Window:Fenster
+Help:Hilfe
+never:niemals
+About:Über
+Thank you for the invitation:Danke für die Einladung 
+I thank you for the good times:Ich danke Dir für all das gute und liebe und Schöne
+nice:liebe
+pretty:Schöne
+your:dein, deine
+mine:mein, meine
+Wishing you a wonderful day:Wunsche dir einen wunderschoenen Tag
+I had no coffee today:Der heute noch keinen Kaffee hatte
+today:heute
+I had:ich hatte
+you:dir
+Peace:Friede
+child:kind
+Good luck (I will press my thumbs for you = I will keep my fingers crossed for you):Ich drücke die Daumen für dich
+are:sind
